@@ -1,0 +1,127 @@
+.header {
+  gap: 1rem;
+  margin: 3rem auto 2rem auto;
+  width: 90%;
+  max-width: 60rem;
+  color: #14532d; /* ciemna zieleń jak tekst w hero */
+  font-size: 1.6rem;
+}
+
+.header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #6b7280; /* jasnoszary jak podtytuł w hero */
+}
+
+.main {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto 4rem auto;
+  color: #111827;
+}
+
+.form {
+  max-width: 50rem;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e5e7eb;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.row p {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .row p {
+    width: 50%;
+  }
+}
+
+.actions {
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.actions button {
+  border: 0;
+  padding: 0.75rem 2.2rem;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 14px 30px rgba(22, 163, 74, 0.35);
+}
+
+.actions button:hover,
+.actions button:focus {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.actions button:disabled,
+.actions button:hover:disabled,
+.actions button:focus:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}

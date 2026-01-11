@@ -1,0 +1,29 @@
+.main {
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.card {
+  max-width: 40rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2.75rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #16a34a;
+}
+
+.card p {
+  margin: 0.4rem 0;
+  color: #4b5563;
+  font-size: 0.98rem;
+}

@@ -1,34 +1,47 @@
 import Image from "next/image";
-import { getMeal } from "../../../lib/meals";
+import { redirect } from "next/navigation";
+import { getMeal, deleteMeal } from "../../../lib/meals";
 import classes from "./page.module.css";
 
-export default async function MealDetailsPage({ params }) {
-  const meal = getMeal(params.slug);
+async function deleteMealAction(formData) {
+  "use server";
 
-  if (!meal) {
-    return <p className={classes.notFound}>Meal not found.</p>;
+  const slug = formData.get("slug");
+  if (!slug) {
+    throw new Error("Missing meal slug.");
   }
 
+  deleteMeal(slug);
+  redirect("/meals");
+}
+
+export default async function MealDetailsPage({ params }) {
+  const meal = getMeal(params.mealSlug || params.slug);
+
   return (
-    <article className={classes.meal}>
+    <main className={classes.main}>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image
-            src={meal.image}
-            alt={meal.title}
-            fill
-          />
+          <Image src={meal.image} alt={meal.title} fill />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>
-          <p className={classes.creator}>by {meal.creator}</p>
+          <p>by {meal.creator}</p>
+          <p className={classes.summary}>{meal.summary}</p>
         </div>
       </header>
 
-      <section className={classes.details}>
-        <p className={classes.summary}>{meal.summary}</p>
-        <p className={classes.instructions}>{meal.instructions}</p>
+      <section className={classes.instructions}>
+        <h2>Instructions</h2>
+        <p>{meal.instructions}</p>
       </section>
-    </article>
+
+      <form action={deleteMealAction} className={classes.deleteForm}>
+        <input type="hidden" name="slug" value={meal.slug} />
+        <button type="submit" className={classes.deleteButton}>
+          Delete this meal
+        </button>
+      </form>
+    </main>
   );
 }

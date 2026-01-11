@@ -63,30 +63,20 @@
 .section {
   display: flex;
   flex-direction: column;
-  color: #ddd6cb;
-  font-size: 1.5rem;
+  color: #7a5233;
+  font-size: 1.1rem;     
   max-width: 50rem;
   width: 90%;
-  margin: 2rem auto;
+  margin: 1.5rem auto; 
   text-align: center;
 }
 
-.loading {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 1.1rem;
-  color: #16a34a;
-  animation: pulse 1.2s ease-in-out infinite;
+.section h2 {
+  margin: 0 0 0.5rem 0;   
+  font-size: 1.6rem;
 }
 
-@keyframes pulse {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.4;
-  }
+.section p {
+  margin: 0.25rem 0;       
 }
+

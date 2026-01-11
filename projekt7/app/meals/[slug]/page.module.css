@@ -81,6 +81,28 @@
   font-weight: 600;
 }
 
+.deleteForm {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.deleteButton {
+  border: 0;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  background: #b91c1c;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.deleteButton:hover,
+.deleteButton:focus {
+  background: #dc2626;
+}
+
+
 @keyframes fade-slide-in-from-left {
   0% {
     opacity: 0;

@@ -9,15 +9,18 @@ export default function MainHeader() {
   return (
     <MainHeaderBackground>
     <header className={classes.header}>
-      <div className={classes.logo}>
-        <Image
-          src={logoImg}
-          alt="Foodies logo"
-          priority
-        />
-        
-        <span>AYH</span>
-      </div>
+       <div className={classes.logo}>
+          <Link href="/" className={classes.logoLink}>
+            <Image
+              src={logoImg}
+              alt="Foodies logo"
+              priority
+            />
+            <span>AYH</span>
+          </Link>
+        </div>
+
+
       <nav className={classes.nav}>
         <ul>
           <li><NavLink href="/meals">Browse Meals</NavLink></li>
