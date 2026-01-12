@@ -1,5 +1,7 @@
 # GreenLevel Food (Next.js LAB10–13)
 
+*(https://yunayana.github.io/JWPwAI_2025_Lab7/)*
+
 Prosty projekt typu **food blog / recipe sharing** zbudowany w ramach laboratoriów z Next.js (część 1–4). Aplikacja pozwala przeglądać wegańskie posiłki, oglądać szczegóły przepisu, dodawać własne dania i obsługuje podstawowe ekrany błędów. [file:25][file:28][file:37]
 
 ---
